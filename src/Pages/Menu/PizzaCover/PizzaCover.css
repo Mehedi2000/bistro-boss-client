@@ -1,0 +1,5 @@
+.pizzas {
+  background-image: url("../../../assets/menu/pizza-bg.jpg");
+  background-position: center;
+  background-attachment: fixed;
+}
