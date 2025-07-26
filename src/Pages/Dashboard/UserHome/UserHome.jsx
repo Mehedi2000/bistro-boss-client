@@ -59,15 +59,15 @@ const UserHome = () => {
           <div>
             <div className="flex items-center justify-center text-blue-600 text-lg">
               <FaShoppingCart className="mr-2"></FaShoppingCart>{" "}
-              <p className="font-medium">ORDERS : {stats.cart}</p>
+              <p className="font-medium">ORDERS : {stats?.cart}</p>
             </div>
             <div className="flex items-center justify-center text-cyan-500 text-lg">
               <FaStar className="mr-2"></FaStar>
-              <p className="font-medium">REVIEWS : {stats.review}</p>
+              <p className="font-medium">REVIEWS : {stats?.review}</p>
             </div>
             <div className="flex items-center justify-center text-yellow-500 text-lg">
               <IoWallet className="mr-2"></IoWallet>{" "}
-              <p className="font-medium">PAYMENT : {stats.payment}</p>
+              <p className="font-medium">PAYMENT : {stats?.payment}</p>
             </div>
           </div>
         </div>

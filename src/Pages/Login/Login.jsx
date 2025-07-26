@@ -8,6 +8,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import SocialLogin from "../../Component/SocialLogin/SocialLogin";
+import loginImg from "../../assets/others/authenticationLogin1.gif";
 
 const Login = () => {
   const [disabled, setDisabled] = useState(true);
@@ -52,15 +53,8 @@ const Login = () => {
   return (
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
-        <div className="text-center md:w-1/2 lg:text-left">
-          <h1 className="text-5xl font-bold">Login now!</h1>
-          <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-        </div>
         <div className="card bg-base-100 md:w-1/2 max-w-sm  shadow-2xl">
+          <h1 className="text-center text-3xl font-medium mt-4">Login Now!</h1>
           <form onSubmit={handleLogin} className="card-body pb-0">
             <fieldset className="fieldset">
               <label className="label">Email</label>
@@ -112,6 +106,9 @@ const Login = () => {
               </Link>
             </small>
           </p>
+        </div>
+        <div className="text-center md:w-1/2 lg:text-left">
+          <img src={loginImg} alt="" />
         </div>
       </div>
     </div>
