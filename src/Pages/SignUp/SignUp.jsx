@@ -49,19 +49,13 @@ const SignUp = () => {
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center md:w-1/2 lg:text-left">
-          {/* <h1 className="text-5xl font-bold">Sign Up now!</h1>
-          <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p> */}
           <img src={loginImg} alt="" />
         </div>
         <div className="card bg-base-100 md:w-1/2 max-w-sm  shadow-2xl">
           <h1 className="text-center text-3xl font-bold mt-4">Sign Up!</h1>
           <form onSubmit={handleSubmit(onSubmit)} className="card-body pb-0">
             <fieldset className="fieldset">
-              <label className="label">Name</label>
+              <label className="label font-bold text-[14px] my-1">Name</label>
               <input
                 type="text"
                 {...register("name", { required: true })}
@@ -74,7 +68,9 @@ const SignUp = () => {
                   Name field is required
                 </span>
               )}
-              <label className="label">Photo URL</label>
+              <label className="label font-bold text-[14px] my-1">
+                Photo URL
+              </label>
               <input
                 type="text"
                 {...register("photoUrl", { required: true })}
@@ -86,7 +82,7 @@ const SignUp = () => {
                   photoUrl field is required
                 </span>
               )}
-              <label className="label">Email</label>
+              <label className="label font-bold text-[14px] my-1">Email</label>
               <input
                 type="email"
                 {...register("email", { required: true })}
@@ -99,7 +95,9 @@ const SignUp = () => {
                   Email field is required
                 </span>
               )}
-              <label className="label">Password</label>
+              <label className="label font-bold text-[14px] my-1">
+                Password
+              </label>
               <input
                 type="password"
                 {...register("password", {
@@ -138,7 +136,10 @@ const SignUp = () => {
           <p className="text-center font-semibold mb-4">
             <small>
               Already Registered?
-              <Link to="/login" className="text-indigo-600 ml-1">
+              <Link
+                to="/login"
+                className="text-indigo-600 ml-1 font-medium text-[14px]"
+              >
                 Go to log in
               </Link>
             </small>

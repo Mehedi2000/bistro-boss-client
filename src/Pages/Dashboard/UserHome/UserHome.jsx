@@ -30,7 +30,7 @@ const UserHome = () => {
           <div className="stat-title text-white font-semibold">MENU</div>
           <div className="stat-value">${stats?.menu}</div>
         </div>
-        <div className="stat bg-yellow-500 text-white px-10 py-8">
+        <div className="stat bg-yellow-600 text-white px-10 py-8">
           <div className="stat-figure text-4xl">
             <AiFillShop></AiFillShop>
           </div>

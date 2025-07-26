@@ -57,25 +57,24 @@ const Login = () => {
           <h1 className="text-center text-3xl font-bold mt-4">Login Now!</h1>
           <form onSubmit={handleLogin} className="card-body pb-0">
             <fieldset className="fieldset">
-              <label className="label">Email</label>
+              <label className="label font-bold text-[14px] my-1">Email</label>
               <input
                 type="email"
                 name="email"
                 className="input"
                 placeholder="Email"
               />
-              <label className="label">Password</label>
+              <label className="label font-bold text-[14px] my-1">
+                Password
+              </label>
               <input
                 type="password"
                 name="password"
                 className="input"
                 placeholder="Password"
               />
-              <div>
-                <a className="link link-hover">Forgot password?</a>
-              </div>
               <div className="mt-2">
-                <label className="label">
+                <label className="label font-bold text-[14px] my-1">
                   <span>
                     <LoadCanvasTemplate />
                   </span>
@@ -101,7 +100,10 @@ const Login = () => {
           <p className="text-center font-semibold mb-4">
             <small>
               New Here?
-              <Link to="/signup" className="text-indigo-600 ml-1">
+              <Link
+                to="/signup"
+                className="text-indigo-600 ml-1 font-medium text-[14px]"
+              >
                 Create a New Account
               </Link>
             </small>

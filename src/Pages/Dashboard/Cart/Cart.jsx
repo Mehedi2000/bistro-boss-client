@@ -44,10 +44,10 @@ const Cart = () => {
         <h2 className="text-2xl font-semibold">TOTAL PRICE : ${totalPrice}</h2>
         {cart.length ? (
           <Link to="/dashboard/payment">
-            <button className="btn btn-warning">PAY</button>
+            <button className="btn bg-yellow-600 text-white">PAY</button>
           </Link>
         ) : (
-          <button disabled className="btn btn-warning">
+          <button disabled className="btn bg-yellow-600 text-white">
             PAY
           </button>
         )}
@@ -56,8 +56,8 @@ const Cart = () => {
         <table className="table ">
           {/* head */}
           <thead>
-            <tr className="bg-yellow-500">
-              <th></th>
+            <tr className="bg-yellow-600 text-white">
+              <th>#</th>
               <th>ITEM IMAGE</th>
               <th>ITEM NAME</th>
               <th>PRICE</th>

@@ -103,7 +103,7 @@ const AdminHome = () => {
           <div className="stat-value">${stats?.revenue?.toFixed(1)}</div>
         </div>
 
-        <div className="stat bg-yellow-500 text-white px-10 py-8">
+        <div className="stat bg-yellow-600 text-white px-10 py-8">
           <div className="stat-figure text-4xl">
             <FaUsers></FaUsers>
           </div>

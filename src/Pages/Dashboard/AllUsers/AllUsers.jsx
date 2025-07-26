@@ -67,8 +67,8 @@ const AllUsers = () => {
         <table className="table table-zebra">
           {/* head */}
           <thead>
-            <tr className="bg-yellow-500">
-              <th></th>
+            <tr className="bg-yellow-600 text-white">
+              <th>#</th>
               <th>NAME</th>
               <th>EMAIL</th>
               <th>ROLE</th>
@@ -87,7 +87,7 @@ const AllUsers = () => {
                   ) : (
                     <button
                       onClick={() => handleMakeAdmin(user)}
-                      className="btn btn-ghost text-white bg-yellow-500"
+                      className="btn btn-ghost text-white bg-yellow-600"
                     >
                       <FaUsers className="text-xl"></FaUsers>
                     </button>

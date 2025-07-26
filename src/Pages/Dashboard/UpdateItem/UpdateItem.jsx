@@ -120,7 +120,7 @@ const UpdateItem = () => {
             />
           </div>
 
-          <button className="btn btn-warning font-bold">
+          <button className="btn bg-yellow-600 text-white">
             Update Recipe Details
           </button>
         </form>

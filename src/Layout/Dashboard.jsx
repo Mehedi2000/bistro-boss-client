@@ -21,7 +21,7 @@ const Dashboard = () => {
   return (
     <div className="flex">
       {/*Dashboard side bar*/}
-      <div className="w-64 min-h-screen bg-yellow-500">
+      <div className="w-64 min-h-screen bg-yellow-600">
         <ul className="menu">
           <a className=" text-xl font-bold text-center py-8">
             BISTRO BOSS
@@ -40,22 +40,23 @@ const Dashboard = () => {
           </a>
           {isAdmin ? (
             <>
-              <li>
+              <li className="font-semibold">
                 <NavLink to="/dashboard/adminHome">
-                  <FaHome></FaHome> ADMIN HOME
+                  <FaHome className="text-lg"></FaHome>
+                  ADMIN HOME
                 </NavLink>
               </li>
-              <li>
+              <li className="font-semibold">
                 <NavLink to="/dashboard/addItems">
-                  <FaUtensils></FaUtensils> ADD ITEMS
+                  <FaUtensils className="text-lg"></FaUtensils> ADD ITEMS
                 </NavLink>
               </li>
-              <li>
+              <li className="font-semibold">
                 <NavLink to="/dashboard/manageItems">
-                  <FaListUl></FaListUl> MANAGE ITEMS
+                  <FaListUl className="text-lg"></FaListUl> MANAGE ITEMS
                 </NavLink>
               </li>
-              <li>
+              <li className="font-semibold">
                 <NavLink to="/dashboard/allUsers">
                   <FaUsers className="text-lg"></FaUsers> ALL USERS
                 </NavLink>
@@ -63,24 +64,25 @@ const Dashboard = () => {
             </>
           ) : (
             <>
-              <li>
+              <li className="font-semibold">
                 <NavLink to="/dashboard/userHome">
-                  <FaHome></FaHome> USER HOME
+                  <FaHome className="text-lg"></FaHome> USER HOME
                 </NavLink>
               </li>
-              <li>
+              <li className="font-semibold">
                 <NavLink to="/dashboard/paymentHistory">
-                  <FaCalendar></FaCalendar> PAYMENT HISTORY
+                  <FaCalendar className="text-lg"></FaCalendar> PAYMENT HISTORY
                 </NavLink>
               </li>
-              <li>
+              <li className="font-semibold">
                 <NavLink to="/dashboard/cart">
-                  <FaShoppingCart></FaShoppingCart>MY CART({cart.length})
+                  <FaShoppingCart className="text-lg"></FaShoppingCart>MY CART(
+                  {cart.length})
                 </NavLink>
               </li>
-              <li>
+              <li className="font-semibold">
                 <NavLink to="/dashboard/review">
-                  <MdReviews></MdReviews> ADD REVIEW
+                  <MdReviews className="text-lg"></MdReviews> ADD REVIEW
                 </NavLink>
               </li>
             </>
@@ -88,24 +90,24 @@ const Dashboard = () => {
 
           {/*Shared nav links*/}
           <div className="">------------------------------------------</div>
-          <li>
+          <li className="font-semibold">
             <NavLink to="/">
-              <FaHome></FaHome> HOME
+              <FaHome className="text-lg"></FaHome> HOME
             </NavLink>
           </li>
-          <li>
+          <li className="font-semibold">
             <NavLink to="/menu">
-              <MdOutlineMenu></MdOutlineMenu> MENU
+              <MdOutlineMenu className="text-lg"></MdOutlineMenu> MENU
             </NavLink>
           </li>
-          <li>
+          <li className="font-semibold">
             <NavLink to="/order/salad">
-              <FaShoppingBag></FaShoppingBag> SHOP
+              <FaShoppingBag className="text-lg"></FaShoppingBag> SHOP
             </NavLink>
           </li>
-          <li>
+          <li className="font-semibold">
             <NavLink to="/contactUs">
-              <IoMdMail></IoMdMail> CONTACT US
+              <IoMdMail className="text-lg"></IoMdMail> CONTACT US
             </NavLink>
           </li>
         </ul>

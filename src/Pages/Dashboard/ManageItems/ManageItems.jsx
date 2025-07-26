@@ -46,7 +46,7 @@ const ManageItems = () => {
           <table className="table">
             {/* head */}
             <thead>
-              <tr className="bg-yellow-500">
+              <tr className="bg-yellow-600 text-white">
                 <th>#</th>
                 <th>ITEM IMAGE</th>
                 <th>ITEM NAME</th>
@@ -75,7 +75,7 @@ const ManageItems = () => {
                   <td>${item.price}</td>
                   <td>
                     <Link to={`/dashboard/updateItem/${item._id}`}>
-                      <button className="btn btn-ghost text-white bg-yellow-500">
+                      <button className="btn btn-ghost text-white bg-yellow-600">
                         <FaEdit className="text-xl"></FaEdit>
                       </button>
                     </Link>
