@@ -104,8 +104,8 @@ const Dashboard = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink>
-              <IoMdMail></IoMdMail> CONTACT
+            <NavLink to="/contactUs">
+              <IoMdMail></IoMdMail> CONTACT US
             </NavLink>
           </li>
         </ul>
