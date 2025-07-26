@@ -54,7 +54,7 @@ const Login = () => {
     <div className="hero bg-base-200 min-h-screen">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="card bg-base-100 md:w-1/2 max-w-sm  shadow-2xl">
-          <h1 className="text-center text-3xl font-medium mt-4">Login Now!</h1>
+          <h1 className="text-center text-3xl font-bold mt-4">Login Now!</h1>
           <form onSubmit={handleLogin} className="card-body pb-0">
             <fieldset className="fieldset">
               <label className="label">Email</label>
