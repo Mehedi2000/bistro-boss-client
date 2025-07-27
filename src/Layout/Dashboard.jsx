@@ -81,7 +81,7 @@ const Dashboard = () => {
                 </NavLink>
               </li>
               <li className="font-semibold mb-2">
-                <NavLink to="/dashboard/review">
+                <NavLink to="/dashboard/addReview">
                   <MdReviews className="text-lg"></MdReviews> ADD REVIEW
                 </NavLink>
               </li>
