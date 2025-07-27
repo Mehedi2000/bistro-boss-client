@@ -47,7 +47,7 @@ const SignUp = () => {
 
   return (
     <div className="hero bg-base-200 min-h-screen">
-      <div className="hero-content flex-col lg:flex-row-reverse">
+      <div className="hero-content my-8 flex-col lg:flex-row-reverse">
         <div className="text-center md:w-1/2 lg:text-left">
           <img src={loginImg} alt="" />
         </div>

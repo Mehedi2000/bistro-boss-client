@@ -35,7 +35,7 @@ const AddReview = () => {
         subHeading="---Sharing is Caring!!!---"
         heading="GIVE A REVIEW..."
       ></DashboardSectionTitle>
-      <div className="bg-gray-100 p-12">
+      <div className="bg-gray-100 p-4 md:p-12">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-4">
             <fieldset className="fieldset">

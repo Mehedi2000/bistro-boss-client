@@ -48,7 +48,7 @@ const AddItems = () => {
         subHeading="---What's new?---"
         heading="ADD AN ITEM"
       ></DashboardSectionTitle>
-      <div className="bg-gray-100 p-12">
+      <div className="bg-gray-100 py-4 px-4 md:p-12">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-4">
             <fieldset className="fieldset">
@@ -63,9 +63,9 @@ const AddItems = () => {
               />
             </fieldset>
           </div>
-          <div className="flex gap-6 mb-4">
+          <div className="mb-4 flex flex-col md:flex-row gap-4">
             {/*category*/}
-            <div className="w-1/2">
+            <div className="w-full md:w-1/2">
               <fieldset className="fieldset">
                 <legend className="fieldset-legend font-bold">Category*</legend>
                 <select
@@ -83,7 +83,7 @@ const AddItems = () => {
               </fieldset>
             </div>
             {/*price*/}
-            <div className="w-1/2">
+            <div className="w-full md:w-1/2">
               <fieldset className="fieldset">
                 <legend className="fieldset-legend font-bold">Price*</legend>
                 <input

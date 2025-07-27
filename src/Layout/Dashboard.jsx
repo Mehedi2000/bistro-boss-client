@@ -1,5 +1,4 @@
 import {
-  FaBook,
   FaCalendar,
   FaHome,
   FaListUl,
@@ -9,7 +8,6 @@ import {
   FaUtensils,
 } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
-import { LuBookImage } from "react-icons/lu";
 import { MdOutlineMenu, MdReviews } from "react-icons/md";
 import { NavLink, Outlet } from "react-router-dom";
 import useCart from "../hooks/useCart";
@@ -21,7 +19,7 @@ const Dashboard = () => {
   return (
     <div className="flex">
       {/*Dashboard side bar*/}
-      <div className="w-64 min-h-screen bg-yellow-600">
+      <div className="w-44 md:w-64 min-h-screen bg-yellow-600">
         <ul className="menu">
           <a className=" text-xl font-bold text-center py-12">
             BISTRO BOSS
@@ -40,7 +38,7 @@ const Dashboard = () => {
           </a>
           {isAdmin ? (
             <>
-              <li className="font-semibold mb-2">
+              <li className="mb-2 font-semibold">
                 <NavLink to="/dashboard/adminHome">
                   <FaHome className="text-lg"></FaHome>
                   ADMIN HOME
@@ -113,7 +111,7 @@ const Dashboard = () => {
         </ul>
       </div>
       {/*Dashboard content*/}
-      <div className="flex-1 px-8 py-12">
+      <div className="flex-1 px-4 md:px-8 py-12">
         <Outlet></Outlet>
       </div>
     </div>

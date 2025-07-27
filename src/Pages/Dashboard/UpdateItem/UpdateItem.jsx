@@ -50,7 +50,7 @@ const UpdateItem = () => {
         subHeading="---Refresh Info---"
         heading="Update an Item"
       ></DashboardSectionTitle>
-      <div className="bg-gray-100 p-12">
+      <div className="bg-gray-100 p-4 md:p-12">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-4">
             <fieldset className="fieldset">
@@ -66,9 +66,9 @@ const UpdateItem = () => {
               />
             </fieldset>
           </div>
-          <div className="flex gap-6 mb-4">
+          <div className="flex flex-col md:flex-row gap-4 mb-4">
             {/*category*/}
-            <div className="w-1/2">
+            <div className="w-full md:w-1/2">
               <fieldset className="fieldset">
                 <legend className="fieldset-legend font-bold">Category*</legend>
                 <select
@@ -86,7 +86,7 @@ const UpdateItem = () => {
               </fieldset>
             </div>
             {/*price*/}
-            <div className="w-1/2">
+            <div className="w-full md:w-1/2">
               <fieldset className="fieldset">
                 <legend className="fieldset-legend font-bold">Price*</legend>
                 <input

@@ -40,8 +40,12 @@ const Cart = () => {
         heading="Wanna add more?"
       ></DashboardSectionTitle>
       <div className="flex justify-between mb-6">
-        <h2 className="text-2xl font-semibold">TOTAL ORDERS : {cart.length}</h2>
-        <h2 className="text-2xl font-semibold">TOTAL PRICE : ${totalPrice}</h2>
+        <h2 className="font-semibold md:text-2xl">
+          TOTAL ORDERS : {cart.length}
+        </h2>
+        <h2 className="font-semibold md:text-2xl">
+          TOTAL PRICE : ${totalPrice}
+        </h2>
         {cart.length ? (
           <Link to="/dashboard/payment">
             <button className="btn bg-yellow-600 text-white">PAY</button>

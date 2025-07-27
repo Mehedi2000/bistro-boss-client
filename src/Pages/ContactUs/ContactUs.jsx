@@ -20,7 +20,7 @@ const ContactUs = () => {
         subHeading="---Visit Us---"
         heading="OUR LOCATION"
       ></SectionTitle>
-      <div className="flex gap-6 justify-center items-center">
+      <div className="grid justify-center md:grid-cols-3 gap-8">
         <div className="w-[400px] text-center">
           <div className="bg-yellow-600 flex justify-center items-center py-4">
             <BiSolidPhoneCall className="text-3xl text-white"></BiSolidPhoneCall>
