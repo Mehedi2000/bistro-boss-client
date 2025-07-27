@@ -119,7 +119,6 @@ const UpdateItem = () => {
               className="file-input file-input-ghost"
             />
           </div>
-
           <button className="btn bg-yellow-600 text-white">
             Update Recipe Details
           </button>

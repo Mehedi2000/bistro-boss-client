@@ -115,7 +115,7 @@ const AddItems = () => {
             />
           </div>
 
-          <button className="btn bg-yellow-600 font-semibold text-white">
+          <button className="btn bg-yellow-600 text-white">
             Add Item <FaUtensils></FaUtensils>
           </button>
         </form>

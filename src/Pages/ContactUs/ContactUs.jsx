@@ -105,7 +105,7 @@ const ContactUs = () => {
               ></textarea>
             </fieldset>
           </div>
-          <button className="btn bg-yellow-600 font-semibold text-white mt-4">
+          <button className="btn bg-yellow-600 text-white mt-4">
             Send Message <FaPaperPlane></FaPaperPlane>
           </button>
         </form>
