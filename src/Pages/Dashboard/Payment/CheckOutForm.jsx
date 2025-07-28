@@ -88,13 +88,12 @@ const CheckOutForm = () => {
         const res = await axiosSecure.post("/payments", payment);
         console.log("payment save", res.data);
         refetch();
-        if (res.data?.paymentResult?.insertedId) {
+        if (res.data?.paymentResult?.insertedId && res.data?.info?.messageId) {
           Swal.fire({
-            position: "top-end",
+            title:
+              "Thank you for the Payment and Please check your mail for Confirmation",
             icon: "success",
-            title: "Thank you for the Payment",
-            showConfirmButton: false,
-            timer: 1500,
+            draggable: true,
           });
           navigate("/dashboard/paymentHistory");
         }

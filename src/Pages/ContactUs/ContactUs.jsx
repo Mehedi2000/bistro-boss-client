@@ -6,9 +6,29 @@ import { FaLocationDot } from "react-icons/fa6";
 import { GoClockFill } from "react-icons/go";
 import { useForm } from "react-hook-form";
 import { FaPaperPlane, FaUtensils } from "react-icons/fa";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+import Swal from "sweetalert2";
 
 const ContactUs = () => {
-  const { register } = useForm();
+  const {
+    register,
+    reset,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const axiosPublic = useAxiosPublic();
+
+  const onSubmit = async (data) => {
+    const res = await axiosPublic.post("/contactUs", data);
+    if (res.data.success) {
+      reset();
+      Swal.fire({
+        title: "Message Sent Successfully",
+        icon: "success",
+        draggable: true,
+      });
+    }
+  };
   return (
     <div className="mb-6">
       <Cover
@@ -57,7 +77,7 @@ const ContactUs = () => {
         heading="CONTACT FORM"
       ></SectionTitle>
       <div className="bg-gray-100 p-12">
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-4">
             <fieldset className="fieldset">
               <legend className="fieldset-legend font-bold">Name*</legend>
@@ -67,6 +87,11 @@ const ContactUs = () => {
                 className="input w-full"
                 placeholder="Enter your name"
               />
+              {errors.name && (
+                <span className="text-red-600 font-semibold">
+                  Name field is required
+                </span>
+              )}
             </fieldset>
           </div>
           <div className="flex gap-6 mb-4">
@@ -80,6 +105,11 @@ const ContactUs = () => {
                   className="input w-full"
                   placeholder="Enter your email"
                 />
+                {errors.email && (
+                  <span className="text-red-600 font-semibold">
+                    Email field is required
+                  </span>
+                )}
               </fieldset>
             </div>
             {/*Phone*/}
@@ -92,6 +122,11 @@ const ContactUs = () => {
                   className="input w-full"
                   placeholder="Enter your phone number"
                 />
+                {errors.phone && (
+                  <span className="text-red-600 font-semibold">
+                    Phone field is required
+                  </span>
+                )}
               </fieldset>
             </div>
           </div>
@@ -103,9 +138,14 @@ const ContactUs = () => {
                 className="textarea h-40 w-full"
                 placeholder="Write your message here"
               ></textarea>
+              {errors.message && (
+                <span className="text-red-600 font-semibold">
+                  Message field is required
+                </span>
+              )}
             </fieldset>
           </div>
-          <button className="btn bg-yellow-600 text-white mt-4">
+          <button type="submit" className="btn bg-yellow-600 text-white mt-4">
             Send Message <FaPaperPlane></FaPaperPlane>
           </button>
         </form>
