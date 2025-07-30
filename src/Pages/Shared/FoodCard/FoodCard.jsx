@@ -24,7 +24,7 @@ const FoodCard = ({ item }) => {
       axiosSecure.post("/carts", cartItem).then((res) => {
         if (res.data.insertedId) {
           Swal.fire({
-            position: "top-end",
+            position: "top",
             icon: "success",
             title: `${name} added to your cart`,
             showConfirmButton: false,

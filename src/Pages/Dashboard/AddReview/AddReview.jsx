@@ -12,14 +12,12 @@ const AddReview = () => {
     reset,
   } = useForm();
   const onSubmit = async (data) => {
-    console.log(data);
     const review = {
       name: data.name,
       rating: data.rating,
       details: data.details,
     };
     const res = await axiosSecure.post("/reviews", review);
-    console.log(res.data.insertedId);
     if (res.data.insertedId) {
       reset();
       Swal.fire({

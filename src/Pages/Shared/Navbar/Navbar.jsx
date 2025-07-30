@@ -5,6 +5,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import useCart from "../../../hooks/useCart";
 import Swal from "sweetalert2";
 import useAdmin from "../../../hooks/useAdmin";
+import logoImg from "../../../assets/logo.png";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -27,46 +28,46 @@ const Navbar = () => {
 
   const navOptions = (
     <>
-      <li>
+      <li className="font-medium text-[16px] hover:border-b-4 border-yellow-600">
         <Link to="/">HOME</Link>
       </li>
-      <li>
+      <li className="font-medium text-[16px] hover:border-b-4 border-yellow-600">
         <Link to="/contactUs">CONTACT US</Link>
       </li>
-      <li>
+      <li className="font-medium text-[16px] hover:border-b-4 border-yellow-600">
         <Link to="/menu">OUR MENU</Link>
       </li>
-      <li>
+      <li className="font-medium text-[16px] hover:border-b-4 border-yellow-600">
         <Link to="/order/salad">OUR SHOP</Link>
       </li>
       {user && isAdmin && (
-        <li>
+        <li className="font-medium text-[16px] hover:border-b-4 border-yellow-600">
           <Link to="/dashboard/adminHome">DASHBOARD</Link>
         </li>
       )}
       {user && !isAdmin && (
-        <li>
+        <li className="font-medium text-[16px] hover:border-b-4 border-yellow-600">
           <Link to="/dashboard/userHome">DASHBOARD</Link>
         </li>
       )}
 
       {user ? (
         <>
-          <li>
+          <li className="font-medium text-[16px] hover:border-b-4 border-yellow-600">
             <Link onClick={handleLogOut}>LOG OUT</Link>
           </li>
         </>
       ) : (
         <>
-          <li>
+          <li className="font-medium text-[16px] hover:border-b-4 border-yellow-600">
             <Link to="/login">LOGIN</Link>
           </li>
-          <li>
+          <li className="font-medium text-[16px] hover:border-b-4 border-yellow-600">
             <Link to="/signup">SIGN UP</Link>
           </li>
         </>
       )}
-      <li>
+      <li className="ml-2">
         <button className="btn">
           <FaShoppingCart className="text-xl"></FaShoppingCart>
           <div className="bg-yellow-600 py-1 px-2 border rounded-full text-lg text-white">
@@ -105,21 +106,24 @@ const Navbar = () => {
               {navOptions}
             </ul>
           </div>
-          <a className=" text-xl font-bold">
-            BISTRO BOSS
-            <div className="text-sm text-center space-x-1">
-              <span>R</span>
-              <span>E</span>
-              <span>S</span>
-              <span>T</span>
-              <span>A</span>
-              <span>U</span>
-              <span>R</span>
-              <span>A</span>
-              <span>N</span>
-              <span>T</span>
-            </div>
-          </a>
+          <div className="flex gap-2">
+            <img className="h-11" src={logoImg} alt="" />
+            <a className=" text-xl font-bold">
+              BISTRO BOSS
+              <div className="text-sm text-center space-x-1">
+                <span>R</span>
+                <span>E</span>
+                <span>S</span>
+                <span>T</span>
+                <span>A</span>
+                <span>U</span>
+                <span>R</span>
+                <span>A</span>
+                <span>N</span>
+                <span>T</span>
+              </div>
+            </a>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navOptions}</ul>
