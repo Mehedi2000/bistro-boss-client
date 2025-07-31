@@ -8,7 +8,9 @@ const RecommendsMenu = () => {
   const { data: recommendsMenu = [] } = useQuery({
     queryKey: ["recommendsMenu"],
     queryFn: async () => {
-      const res = await axiosPublic.get("http://localhost:5000/recommendsMenu");
+      const res = await axiosPublic.get(
+        "https://bistro-boss-server-eight-ruby.vercel.app/recommendsMenu"
+      );
       return res.data;
     },
   });

@@ -48,9 +48,10 @@ const CheckOutForm = () => {
     });
 
     if (error) {
-      console.log("Payment Error", error);
+      // console.log("Payment Error", error);
       setError(error.message);
     } else {
+      // console.log("payment method", paymentMethod);
       setError("");
     }
 
@@ -66,7 +67,7 @@ const CheckOutForm = () => {
         },
       });
     if (confirmError) {
-      console.log("confirmError", confirmError);
+      // console.log("confirmError", confirmError);
     } else {
       // console.log("paymentIntent", paymentIntent);
       if (paymentIntent.status === "succeeded") {

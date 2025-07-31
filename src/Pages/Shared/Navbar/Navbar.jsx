@@ -14,16 +14,15 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleLogOut = () => {
-    logOut()
-      .then(() => {
-        Swal.fire({
-          title: "User LogOut Successfully",
-          icon: "success",
-          draggable: true,
-        });
-        navigate("/");
-      })
-      .catch((error) => console.log(error));
+    logOut().then(() => {
+      Swal.fire({
+        title: "User LogOut Successfully",
+        icon: "success",
+        draggable: true,
+      });
+      navigate("/");
+    });
+    // .catch((error) => console.log(error));
   };
 
   const navOptions = (

@@ -115,7 +115,9 @@ export const router = createBrowserRouter([
           </AdminRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/menu/${params.id}`),
+          fetch(
+            `https://bistro-boss-server-eight-ruby.vercel.app/menu/${params.id}`
+          ),
       },
       {
         path: "addItems",

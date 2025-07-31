@@ -21,27 +21,26 @@ const SignUp = () => {
   const onSubmit = (data) => {
     createUser(data.email, data.password).then((result) => {
       const user = result.user;
-      console.log(user);
-      updateUserProfile(data.name, data.photoUrl)
-        .then(() => {
-          // console.log("Profile update successfully");
-          const userInfo = {
-            name: data.name,
-            email: data.email,
-          };
-          axiosPublic.post("/users", userInfo).then((res) => {
-            if (res.data.insertedId) {
-              reset();
-              Swal.fire({
-                title: "User Created Successfully",
-                icon: "success",
-                draggable: true,
-              });
-              navigate("/");
-            }
-          });
-        })
-        .catch((error) => console.log(error));
+      // console.log(user);
+      updateUserProfile(data.name, data.photoUrl).then(() => {
+        // console.log("Profile update successfully");
+        const userInfo = {
+          name: data.name,
+          email: data.email,
+        };
+        axiosPublic.post("/users", userInfo).then((res) => {
+          if (res.data.insertedId) {
+            reset();
+            Swal.fire({
+              title: "User Created Successfully",
+              icon: "success",
+              draggable: true,
+            });
+            navigate("/");
+          }
+        });
+      });
+      // .catch((error) => console.log(error));
     });
   };
 
