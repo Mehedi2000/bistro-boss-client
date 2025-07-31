@@ -53,7 +53,7 @@ const FoodCard = ({ item }) => {
   return (
     <div className="card bg-base-100 w-96 shadow-sm bg-gray-100">
       <figure>
-        <img className="h-72 w-full" src={image} alt="Shoes" />
+        <img className="h-64 w-full" src={image} alt="Shoes" />
       </figure>
       <p className="bg-black text-white font-semibold right-0 absolute mt-4 mr-4 px-4 py-2">
         ${price}

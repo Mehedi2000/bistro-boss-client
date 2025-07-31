@@ -11,7 +11,12 @@ const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_ke
 const UpdateItem = () => {
   const { name, category, recipe, price, _id } = useLoaderData();
 
-  const { register, handleSubmit, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
   const axiosPublic = useAxiosPublic();
   const axiosSecure = useAxiosSecure();
   const onSubmit = async (data) => {
@@ -64,6 +69,11 @@ const UpdateItem = () => {
                 className="input w-full"
                 placeholder="Recipe name"
               />
+              {errors.name && (
+                <span className="text-red-600 font-semibold">
+                  Recipe name field is required
+                </span>
+              )}
             </fieldset>
           </div>
           <div className="flex flex-col md:flex-row gap-4 mb-4">
@@ -83,6 +93,11 @@ const UpdateItem = () => {
                   <option value="dessert">Dessert</option>
                   <option value="drinks">Drinks</option>
                 </select>
+                {errors.category && (
+                  <span className="text-red-600 font-semibold">
+                    Category field is required
+                  </span>
+                )}
               </fieldset>
             </div>
             {/*price*/}
@@ -96,6 +111,11 @@ const UpdateItem = () => {
                   className="input w-full"
                   placeholder="Price"
                 />
+                {errors.price && (
+                  <span className="text-red-600 font-semibold">
+                    Price field is required
+                  </span>
+                )}
               </fieldset>
             </div>
           </div>
@@ -110,6 +130,11 @@ const UpdateItem = () => {
                 className="textarea h-40 w-full"
                 placeholder="Recipe Details"
               ></textarea>
+              {errors.recipe && (
+                <span className="text-red-600 font-semibold">
+                  Recipe Details field is required
+                </span>
+              )}
             </fieldset>
           </div>
           <div className="mb-4">
@@ -118,6 +143,11 @@ const UpdateItem = () => {
               type="file"
               className="file-input file-input-ghost"
             />
+            {errors.image && (
+              <span className="text-red-600 font-semibold">
+                Image is required
+              </span>
+            )}
           </div>
           <button className="btn bg-yellow-600 text-white">
             Update Recipe Details

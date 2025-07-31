@@ -14,6 +14,7 @@ const Login = () => {
   const [disabled, setDisabled] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
+  const [error, setError] = useState(null);
 
   const from = location.state?.from?.pathname || "/";
 
@@ -25,27 +26,35 @@ const Login = () => {
 
   const handleLogin = (event) => {
     event.preventDefault();
+    setError("");
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
-    signIn(email, password).then((result) => {
-      const user = result.user;
-      console.log(user);
-      Swal.fire({
-        title: "User Login Successfully",
-        icon: "success",
-        draggable: true,
+    signIn(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        Swal.fire({
+          title: "User Login Successfully",
+          icon: "success",
+          draggable: true,
+        });
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        console.log(error.message);
+        setError(error.message);
       });
-      navigate(from, { replace: true });
-    });
   };
 
   const handleValidateCaptcha = (e) => {
+    setError("");
     const user_captcha_value = e.target.value;
     if (validateCaptcha(user_captcha_value)) {
       setDisabled(false);
     } else {
+      setError("Invalid Captcha entry!");
       setDisabled(true);
     }
   };
@@ -87,6 +96,7 @@ const Login = () => {
                   placeholder="Type the captcha above"
                 />
               </div>
+              <span className="text-red-600 mt-2 text-[14px]">{error}</span>
               <input
                 disabled={disabled}
                 className="btn btn-neutral mt-3"
