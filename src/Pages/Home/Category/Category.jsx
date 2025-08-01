@@ -18,7 +18,7 @@ const Category = () => {
         heading={"Order Online"}
       ></SectionTitle>
       <Swiper
-        slidesPerView={4}
+        slidesPerView={3}
         spaceBetween={20}
         pagination={{
           clickable: true,
@@ -27,62 +27,62 @@ const Category = () => {
         className="mySwiper mb-20"
       >
         <SwiperSlide>
-          <img src={slide1} alt="" />
-          <h3 className="text-3xl opacity-70  uppercase text-center -mt-16  text-white">
+          <img className="h-48 md:h-auto w-full" src={slide1} alt="" />
+          <h3 className="text-[16px] md:text-3xl opacity-80 uppercase text-center -mt-16 text-white">
             Salads
           </h3>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slide2} alt="" />
-          <h3 className="text-3xl opacity-70  uppercase text-center -mt-16 text-white">
+          <img className="h-48 md:h-auto w-full" src={slide2} alt="" />
+          <h3 className="text-[16px] md:text-3xl opacity-80  uppercase text-center -mt-16 text-white">
             Pizzas
           </h3>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slide3} alt="" />
-          <h3 className="text-3xl opacity-70  uppercase text-center -mt-16   text-white">
+          <img className="h-48 md:h-auto w-full" src={slide3} alt="" />
+          <h3 className="text-[16px] md:text-3xl opacity-80  uppercase text-center -mt-16   text-white">
             Soups
           </h3>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slide4} alt="" />
-          <h3 className="text-3xl opacity-70  uppercase text-center -mt-16   text-white">
+          <img className="h-48 md:h-auto w-full" src={slide4} alt="" />
+          <h3 className="text-[16px] md:text-3xl opacity-80  uppercase text-center -mt-16   text-white">
             Desserts
           </h3>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slide5} alt="" />
-          <h3 className="text-3xl opacity-70  uppercase text-center -mt-16  text-white">
+          <img className="h-48 md:h-auto w-full" src={slide5} alt="" />
+          <h3 className="text-[16px] md:text-3xl opacity-80  uppercase text-center -mt-16  text-white">
             Salads
           </h3>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slide1} alt="" />
-          <h3 className="text-3xl opacity-70  uppercase text-center -mt-16  text-white">
+          <img className="h-48 md:h-auto w-full" src={slide1} alt="" />
+          <h3 className="text-[16px] md:text-3xl opacity-80  uppercase text-center -mt-16  text-white">
             Salads
           </h3>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slide2} alt="" />
-          <h3 className="text-3xl opacity-70  uppercase text-center -mt-16 text-white">
+          <img className="h-48 md:h-auto w-full" src={slide2} alt="" />
+          <h3 className="text-[16px] md:text-3xl opacity-80  uppercase text-center -mt-16 text-white">
             Pizzas
           </h3>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slide3} alt="" />
-          <h3 className="text-3xl opacity-70  uppercase text-center -mt-16   text-white">
+          <img className="h-48 md:h-auto w-full" src={slide3} alt="" />
+          <h3 className="text-[16px] md:text-3xl opacity-80  uppercase text-center -mt-16   text-white">
             Soups
           </h3>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slide4} alt="" />
-          <h3 className="text-3xl opacity-70  uppercase text-center -mt-16   text-white">
+          <img className="h-48 md:h-auto w-full" src={slide4} alt="" />
+          <h3 className="text-[16px] md:text-3xl opacity-80 uppercase text-center -mt-16   text-white">
             Desserts
           </h3>
         </SwiperSlide>
         <SwiperSlide>
-          <img src={slide5} alt="" />
-          <h3 className="text-3xl opacity-70  uppercase text-center -mt-16  text-white">
+          <img className="h-48 md:h-auto w-full" src={slide5} alt="" />
+          <h3 className="text-[16px] md:text-3xl opacity-80  uppercase text-center -mt-16  text-white">
             Salads
           </h3>
         </SwiperSlide>

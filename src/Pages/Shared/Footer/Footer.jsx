@@ -3,7 +3,7 @@ const Footer = () => {
     <footer>
       <div className="footer p-10 bg-neutral text-neutral-content flex justify-evenly">
         <div>
-          <p className="text-2xl font-semibold uppercase text-center">
+          <p className="text-lg md:text-2xl font-semibold uppercase text-center">
             contact us
           </p>
           <p>
@@ -17,7 +17,9 @@ const Footer = () => {
           </p>
         </div>
         <div className="">
-          <h3 className="uppercase text-2xl font-semibold mb-2">Follow us</h3>
+          <h3 className="uppercase text-lg md:text-2xl font-semibold mb-2">
+            Follow us
+          </h3>
           <span className="footer-title">Social</span>
           <div className="grid grid-flow-col gap-4">
             <a>

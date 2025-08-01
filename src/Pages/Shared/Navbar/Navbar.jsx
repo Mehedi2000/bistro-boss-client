@@ -106,10 +106,10 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="flex gap-2">
-            <img className="h-11" src={logoImg} alt="" />
-            <a className=" text-xl font-bold">
+            <img className="h-7 md:h-11" src={logoImg} alt="" />
+            <a className="text-[13px] md:text-xl font-bold">
               BISTRO BOSS
-              <div className="text-sm text-center space-x-1">
+              <div className="text-[8px] md:text-sm text-center space-x-1">
                 <span>R</span>
                 <span>E</span>
                 <span>S</span>
