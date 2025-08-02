@@ -41,7 +41,7 @@ const ContactUs = () => {
         heading="OUR LOCATION"
       ></SectionTitle>
       <div className="grid justify-center md:grid-cols-3 gap-8">
-        <div className="w-[400px] text-center">
+        <div className="w-80 md:w-96 text-center">
           <div className="bg-yellow-600 flex justify-center items-center py-4">
             <BiSolidPhoneCall className="text-3xl text-white"></BiSolidPhoneCall>
           </div>
@@ -50,7 +50,7 @@ const ContactUs = () => {
             <p>+38 (012) 34 56 789</p>
           </div>
         </div>
-        <div className="w-96 text-center">
+        <div className="w-80 md:w-96 text-center">
           <div className="bg-yellow-600 flex justify-center items-center py-4">
             <FaLocationDot className="text-3xl text-white"></FaLocationDot>
           </div>
@@ -59,7 +59,7 @@ const ContactUs = () => {
             <p>123 ABS street,Uni 21,Bangladesh</p>
           </div>
         </div>
-        <div className="w-96 text-center">
+        <div className="w-80 md:w-96 text-center">
           <div className="bg-yellow-600 flex justify-center items-center py-4">
             <GoClockFill className="text-3xl text-white"></GoClockFill>
           </div>
@@ -76,7 +76,7 @@ const ContactUs = () => {
         subHeading="---Send Us a Message---"
         heading="CONTACT FORM"
       ></SectionTitle>
-      <div className="bg-gray-100 p-12">
+      <div className="bg-gray-100 p-6 md:p-12">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-4">
             <fieldset className="fieldset">
@@ -94,9 +94,9 @@ const ContactUs = () => {
               )}
             </fieldset>
           </div>
-          <div className="flex gap-6 mb-4">
+          <div className="md:flex md:gap-6 mb-4">
             {/*Email*/}
-            <div className="w-1/2">
+            <div className="mb-4 md:w-1/2">
               <fieldset className="fieldset">
                 <legend className="fieldset-legend font-bold">Email*</legend>
                 <input
@@ -113,7 +113,7 @@ const ContactUs = () => {
               </fieldset>
             </div>
             {/*Phone*/}
-            <div className="w-1/2">
+            <div className="md:w-1/2">
               <fieldset className="fieldset">
                 <legend className="fieldset-legend font-bold">Phone*</legend>
                 <input

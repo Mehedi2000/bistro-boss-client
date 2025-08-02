@@ -7,7 +7,7 @@ const Cover = ({ img, title, text }) => {
       }}
     >
       <div className="">
-        <div className=" text-white bg-black opacity-50 text-center py-16 px-32 md:py-16 md:px-64 ">
+        <div className=" text-white bg-black opacity-50 text-center py-10 px-12 md:py-16 md:px-64 ">
           <h1 className="mb-5 uppercase text-3xl font-bold md:text-7xl">
             {title}
           </h1>
